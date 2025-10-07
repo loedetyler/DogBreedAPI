@@ -26,10 +26,10 @@ class Breed(models.Model):
 
     name = models.CharField(max_length=100)
     size = models.CharField(max_length=10, choices=SizeChoices.choices)
-    friendliness = models.IntegerChoices(choices=[(i, i) for i in range(1, 6)])
-    trainability = models.IntegerChoices(choices=[(i, i) for i in range(1, 6)])
-    sheddingamount = models.IntegerChoices(choices=[(i, i) for i in range(1, 6)])
-    exerciseneeds = models.IntegerChoices(choices=[(i, i) for i in range(1, 6)])
+    friendliness = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
+    trainability = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
+    sheddingamount = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
+    exerciseneeds = models.IntegerField(choices=[(i, i) for i in range(1, 6)])
 
     def __str__(self):
         return self.name
