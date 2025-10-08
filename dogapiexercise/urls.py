@@ -22,4 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/dogs/', views.DogList.as_view()),
     path('api/dogs/<int:pk>/', views.DogDetail.as_view()),
+    path('api/breeds/', views.BreedList.as_view()),
+    path('api/breeds/<int:pk>/', views.BreedDetail.as_view()),
 ]
