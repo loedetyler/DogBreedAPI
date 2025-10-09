@@ -51,7 +51,7 @@ class BreedList(APIView):
         serializer = BreedSerializer(breed, many=True)
         return Response(serializer.data)
     
-    def post(self, request, pk, format=None):
+    def post(self, request, format=None):
         serializer = BreedSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
