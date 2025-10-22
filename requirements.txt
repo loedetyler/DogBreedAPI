@@ -1,0 +1,7 @@
+Django==4.2.25
+pip==20.2.3
+setuptools==49.2.1
+sqlparse==0.5.3
+typing-extensions==4.15.0
+tzdata==2025.2
+djangorestframework==3.16.1
