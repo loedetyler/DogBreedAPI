@@ -3,9 +3,9 @@ version: '3.9'
 services:
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    working_dir: /code
     volumes:
-      - .:/loededogapi-docker
+      -code-volume:/code
     ports:
       - "8000:8000"
     depends_on:
@@ -14,8 +14,14 @@ services:
   db:
     image: postgres:13
     environment:
-      POSTGRES_USER: doguser
-      POSTGRES_PASSWORD: dogpass
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
       POSTGRES_DB: dogdb
+    volumes:
+      - db-data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+
+volumes:
+  code-volume:
+  db-data:
