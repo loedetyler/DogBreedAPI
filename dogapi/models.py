@@ -16,8 +16,9 @@ class Dog(models.Model):
 
     def __str__(self):
         return self.name
-    
-class Breed(models.Model): # This class was partially generated using ChatGPT on October 8th. I was having issues troubleshooting some errors
+        
+# Breed was partially generated using ChatGPT on October 8th. I was running into errors when trying to use Choices and IntegerChoices instead of IntegerFields
+class Breed(models.Model):
     class SizeChoices(models.TextChoices):
         TINY = 'Tiny'
         SMALL = 'Small'
