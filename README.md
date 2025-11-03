@@ -2,8 +2,8 @@ In the Breeds model, I was running into some troubleshooting issues. I couldn't 
 I gave it the requirement for setting up the Breed model and asked if I was on the right track in setting it up: </br>
 
 > these are the requirements, </br>
-> A breed should contain the following fields:
-> name (a character string)
+> A breed should contain the following fields: </br>
+> name (a character string) </br>
 > size (a character string) [should accept Tiny, Small, Medium, Large] </br>
 > friendliness (an integer field) [should accept values from 1-5] </br>
 > trainability (an integer field) [should accept values from 1-5] </br>
