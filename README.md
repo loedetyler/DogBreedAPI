@@ -1,5 +1,6 @@
-In the Breeds model, I was running into some troubleshooting issues. I couldn't figure out some error I was running into or wanted to verify I was on the right track since Python is not my strong suit and I was getting back into the swing of it. </br>
-I gave it the requirement for setting up the Breed model and asked if I was on the right track in setting it up: </br>
+In the Breeds model, I was running into some troubleshooting issues. I couldn't figure out some error I was running into with *models.Choices* and *models.IntegerChoices* and wanted to verify I was on the right track. </br>
+
+I gave ChatGPT the requirement for setting up the Breed model and asked if I was on the right track in setting it up: </br>
 
 > these are the requirements, </br>
 > A breed should contain the following fields: </br>
