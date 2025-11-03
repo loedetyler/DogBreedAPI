@@ -17,7 +17,7 @@ class Dog(models.Model):
     def __str__(self):
         return self.name
     
-class Breed(models.Model): # This class was partially generated using ChatGPT on October 8th. I was having issues troubleshooting some errors I was running into with the Breed model
+class Breed(models.Model): # This class was partially generated using ChatGPT on October 8th. I was having issues troubleshooting some errors
     class SizeChoices(models.TextChoices):
         TINY = 'Tiny'
         SMALL = 'Small'
