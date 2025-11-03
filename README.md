@@ -4,11 +4,11 @@ I gave it the requirement for setting up the Breed model and asked if I was on t
 > these are the requirements, </br>
 > A breed should contain the following fields:
 > name (a character string)
-> size (a character string) [should accept Tiny, Small, Medium, Large]
-> friendliness (an integer field) [should accept values from 1-5]
-> trainability (an integer field) [should accept values from 1-5]
-> sheddingamount (an integer field) [should accept values from 1-5]
-> exerciseneeds (an integer field) [should accept values from 1-5]
+> size (a character string) [should accept Tiny, Small, Medium, Large] </br>
+> friendliness (an integer field) [should accept values from 1-5] </br>
+> trainability (an integer field) [should accept values from 1-5] </br>
+> sheddingamount (an integer field) [should accept values from 1-5] </br>
+> exerciseneeds (an integer field) [should accept values from 1-5] </br>
 >
 > does this look right in setting it up?
 > ```python
@@ -28,7 +28,7 @@ To which ChatGPT responded:
 > size = models.Choices(Tiny, Small, Medium, Large)
 > friendliness = models.IntegerChoices(1,2,3,4,5)
 > ```
-> **models.Choices** and **models.IntegerChoices** are meant to define enums (choice lists), not fields directly.
+> *models.Choices* and *models.IntegerChoices* are meant to define enums (choice lists), not fields directly.
 > You still need to define the field type (CharField, IntegerField, etc.) and then attach the choices.
 > ✅ Correct Django model
 > Here’s the clean, working version that satisfies your requirements:
@@ -51,3 +51,5 @@ To which ChatGPT responded:
 >   def __str__(self):
 >       return self.name
 > ```
+
+I believe this was the main thing I asked ChatGPT about, I was looking back through my logs around this time and could only find this and some help with testing errors I was running into.
