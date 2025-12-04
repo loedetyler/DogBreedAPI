@@ -1,28 +1,18 @@
-version: '3.9'
-
 services:
   web:
     build: .
-    working_dir: /code
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python /code/manage.py runserver 0.0.0.0:8000
     volumes:
-      - code-volume:/code
+      - .:/code
     ports:
       - "8000:8000"
-    depends_on:
-      - db
 
   db:
     image: postgres:13
     environment:
-      POSTGRES_USER: doguser
-      POSTGRES_PASSWORD: dogpass
-      POSTGRES_DB: dogdb
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
     volumes:
       - db-data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
 
 volumes:
-  code-volume:
   db-data:

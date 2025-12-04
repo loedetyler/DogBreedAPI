@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'dogapiexercise.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dogdb',
-        'USER': 'doguser',
-        'PASSWORD': 'dogpass',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
         'HOST': 'db',
         'PORT': '5432',
     }
